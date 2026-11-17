@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Météo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <header class="entete">
+      <h1>Météo</h1>
+      <p class="sous-titre">Prévisions en temps réel</p>
+    </header>
+
+    <!-- Recherche d'une ville -->
+    <form id="formRecherche" class="recherche">
+      <input type="text" id="champVille" placeholder="Entrez une ville..." value="Casablanca" aria-label="Nom de la ville" autocomplete="off">
+      <button type="submit">Rechercher</button>
+    </form>
+
+    <!-- Messages (chargement, erreurs) : rempli par JavaScript -->
+    <p id="message" class="message" role="status"></p>
+
+    <!-- Météo actuelle (valeurs d'exemple, JavaScript les remplacera) -->
+    <section id="meteoActuelle" class="actuelle">
+      <h2 id="nomVille">Casablanca, Maroc</h2>
+      <div id="icone" class="icone">☀️</div>
+      <p id="temperature" class="temperature">21°C</p>
+      <p id="description" class="description">Ensoleillé</p>
+      <p id="vent" class="vent">💨 Vent : 14 km/h</p>
+    </section>
+
+    <!-- Prévisions des prochains jours (cartes d'exemple) -->
+    <section class="bloc-previsions">
+      <h3>Prochains jours</h3>
+      <div id="previsions" class="previsions">
+        <article class="jour">
+          <p class="jour-nom">Mer</p>
+          <p class="jour-icone">⛅</p>
+          <p class="jour-temp"><span class="max">23°</span> <span class="min">15°</span></p>
+        </article>
+        <article class="jour">
+          <p class="jour-nom">Jeu</p>
+          <p class="jour-icone">🌧️</p>
+          <p class="jour-temp"><span class="max">19°</span> <span class="min">13°</span></p>
+        </article>
+        <article class="jour">
+          <p class="jour-nom">Ven</p>
+          <p class="jour-icone">☀️</p>
+          <p class="jour-temp"><span class="max">25°</span> <span class="min">16°</span></p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
